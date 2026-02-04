@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | COS × ISS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    #checkout {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    #checkout h1 {
+      text-align: center;
+      color: palevioletred;
+      margin-bottom: 10px;
+    }
+
+    #checkout p.subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .summary-box,
+    .payment-box {
+      border: 1px solid rgba(255, 51, 153, 0.2);
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .summary-box h3,
+    .payment-box h3 {
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    #checkout-total {
+      font-size: 22px;
+      font-weight: 700;
+      color: palevioletred;
+      margin-top: 10px;
+    }
+
+    .payment-box img {
+      display: block;
+      margin: 20px auto;
+      max-width: 220px;
+      border-radius: 12px;
+      border: 1px solid #eee;
+    }
+
+    .payment-box p {
+      font-size: 14px;
+      text-align: center;
+      color: #555;
+    }
+
+    .checkout-actions {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .checkout-actions button {
+      padding: 15px 40px;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    .secure-note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER (reuse your existing one if needed) -->
+
+  <section id="checkout">
+    <h1>Checkout</h1>
+    <p class="subtitle">
+      Thank you for supporting the COS × ISS Valentine’s Fundraiser 💕
+    </p>
+
+    <div class="checkout-grid">
+
+      <!-- ORDER SUMMARY -->
+      <div class="summary-box">
+        <h3>Order Summary</h3>
+
+        <div id="checkout-total">RM0.00</div>
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="payment-box">
+        <h3>Touch ’n Go Payment</h3>
+
+        <img src="img/tng-qr.png" alt="Touch n Go QR Code">
+
+        <p>
+          Please pay the <strong>exact amount</strong> shown.<br>
+          After payment, submit your order using the form below.
+        </p>
+      </div>
+    </div>
+
+    <!-- ACTION -->
+<div class="checkout-actions">
+  <section id="order-form-section">
+    <h3 style="text-align:center; margin-top:40px;">Submit Your Order</h3>
+    <form id="orderForm" style="max-width:500px; margin:20px auto; display:flex; flex-direction:column; gap:15px" 
+          action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+      
+      <!-- Web3Forms access key -->
+      <input type="hidden" name="access_key" value="6ef44868-45a5-4303-985e-cb83bc342825">
+
+      <!-- User Inputs -->
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <!-- Auto-filled Order Summary -->
+      <textarea
+          name="order_details"
+          id="order_details"
+          readonly
+          style="background:#f9f9f9; font-size:14px; resize:none;"
+      ></textarea>
+
+      <textarea name="message" placeholder="Special Requests / Notes" required></textarea>
+
+     
+      <!-- Hidden fields to store order summary and total -->
+      <input type="hidden" name="order_summary" id="order_summary">
+      <input type="hidden" name="order_total" id="order_total">
+
+      <button type="submit" class="normal">Send Order</button>
+    </form>
+  </section>
+
+  <div class="secure-note">
+    <i class="fa fa-lock"></i>
+    Payments are processed via Touch ’n Go. Receipts required.
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

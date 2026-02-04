@@ -1,0 +1,44 @@
+[
+    {
+      "id": "brownies",
+      "name": "Brownies",
+      "price": 5.00,
+      "quantity": 2,
+      "image": "img/brownies.png"
+    },
+    {
+        "id": "cookies",
+      "name": "Chocolate Chip Cookies",
+      "price": 7.00,
+      "quantity": 2,
+      "image": "img/cookies.jpg"
+    },
+    {
+        "id": "walnut",
+      "name": "Walnut Cookies",
+      "price": 10.00,
+      "quantity": 2,
+      "image": "img/walnut.jpg"
+    },
+    {
+        "id": "flowers",
+      "name": "Soap Flower Bouquet",
+      "price": 10.00,
+      "quantity": 2,
+      "image": "img/flowers.webp"
+    },
+    {
+        "id": "cards",
+      "name": "Cards",
+      "price": 0.50,
+      "quantity": 2,
+      "image": "img/cards.webp"
+    },
+    {
+        "id": "stickers",
+      "name": "Stickers",
+      "price": 0.25,
+      "quantity": 2,
+      "image": "img/logo.png"
+    }
+  ]

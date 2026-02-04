@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <Title> COS x ISS </Title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <section id="header">
+            <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                    <a href="#" id="close"><i class="fa fa-times"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+                <i id="bar" class="fa fa-outdent"></i>
+            </div>
+        </section>
+        
+        <section id="prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="img/brownies.png" width="100%" id="MainImg" alt="">
+            </div>
+            <div class="single-pro-details">
+                <h6>Shop / Brownies</h6>
+                <h2>BROWNIES</h2>
+                <p><strong>Allergens:</strong> Gluten, Peanuts, Chocolate.</p>
+                <p><strong>Cookie Care:</strong> store in 30ºC or less, consume within 1 week.</p>
+                
+                <h2>RM5.00</h2>
+                <input type="number" id="quantity" value="1" min="1">
+                <button class="normal add-to-cart"
+                    data-id="brownies"
+                    data-name="Brownies"
+                    data-price="5.00"
+                    data-image="img/brownies.png">
+                    Add to Cart
+                </button>
+                              
+                
+            </div>
+        </section>
+
+        <section id="product1" class="section-p1">
+            <h4>You might also like</h4>
+            <div class="pro-container">
+                <div class="pro-container">
+                    <div class="pro" onclick="window.location.href='cookies.html'">
+                        <img src="img/cookies.jpg" alt="">
+                        <div class="des">
+                            <span>ISS & COS</span>
+                            <h5>Chocolate Chip Cookies</h5>
+                            <h4>RM7.00 / piece</h4>   
+                        </div>
+                        <a href="cookies.html"><i class="fa fa-shopping-cart cart"></i></a>
+                    </div>
+                    <div class="pro" onclick="window.location.href='walnut.html'">
+                        <img src="img/walnut.jpg" alt="">
+                        <div class="des">
+                            <span>COS</span>
+                            <h5>Walnut Cookies</h5>
+                            <h4>RM10.00 / 8 pieces</h4>   
+                        </div>
+                        <a href="walnut.html"><i class="fa fa-shopping-cart cart"></i></a>
+                    </div>
+                    <div class="pro" onclick="window.location.href='flowers.html'">
+                        <img src="img/flowers.webp" alt="">
+                        <div class="des">
+                            <span>COS</span>
+                            <h5>Soap Flower Bouquet</h5>
+                            <h4>RM10.00</h4>   
+                        </div>
+                        <a href="flowers.html"><i class="fa fa-shopping-cart cart"></i></a>
+                    </div>
+                    <div class="pro" onclick="window.location.href='stickers.html'">
+                        <img src="img/logo.png" alt="">
+                        <div class="des">
+                            <span>ISS & COS</span>
+                            <h5>Stickers</h5>
+                            <h4>RM0.25</h4>   
+                        </div>
+                        <a href="stickers.html"><i class="fa fa-shopping-cart cart"></i></a>
+                    </div>
+                    <div class="pro" onclick="window.location.href='cards.html'">
+                        <img src="img/cards.webp" alt="">
+                        <div class="des">
+                            <span>COS</span>
+                            <h5>Cards</h5>
+                            <h4>RM0.50</h4>   
+                        </div>
+                        <a href="cards.html"><i class="fa fa-shopping-cart cart"></i></a>
+                    </div>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="img/logo.png" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> Wawasan University</p>
+                <p><strong>Whatsapp:</strong> +123 456 789</p>
+                <p><strong>e-mail:</strong> rumc-cos@rumc.edu</p>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026, RUMC COS </p>
+            </div>
+        </footer>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
